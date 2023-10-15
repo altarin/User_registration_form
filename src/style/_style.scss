@@ -1,6 +1,60 @@
-.right_img{
+.right-side{
+    background: url("/src/static/images/rightImage.jpg") center no-repeat;
+    background-size: cover;
     float:right;
-    width: 100px;
-    height: 200px;
-    border: 1px solid #877544;
+    // width: 50vw;
+    width: 701.663px;
+    height: 779.625px;
+    // border: 1px solid #877544;
+}
+.left-side{
+    float: left;
+    width: 49vw;
+}
+
+header{
+    text-align: center;
+    padding-top: 46px;
+
+}
+
+.left-side_account{
+    width: 288px;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 17.325px;
+align-self: stretch;
+border: 1px solid #877980;
+margin-left: auto;
+margin-right: auto;
+}
+.blue-link{
+    color: $color_blue-link;
+}
+
+.header-logo{
+    padding-bottom: 116px;
+}
+footer{
+    text-align: center;
+    padding-top: 30px;   
+}
+.left-side_account_input{
+    width: -webkit-fill-available;
+    height: 34px;
+    border-radius: 8px;
+    border: 0.7px solid $color_border-input;
+}
+.left-side_text-agree{
+    text-align: center;
+}
+
+.left-side_button{
+    background-color: $color_black-btn;
+    width: -webkit-fill-available;
+    height: 34px;
+    border-radius: 8px;
+    color: $color_white;
 }
