@@ -15,20 +15,19 @@
 header{
     text-align: center;
     padding-top: 46px;
-
 }
 
-.left-side_account{
+.account{
     width: 288px;
     display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 17.325px;
-align-self: stretch;
-border: 1px solid #877980;
-margin-left: auto;
-margin-right: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 17.325px;
+    align-self: stretch;
+    border: 1px solid #877980;
+    margin-left: auto;
+    margin-right: auto;
 }
 .blue-link{
     color: $color_blue-link;
@@ -41,20 +40,41 @@ footer{
     text-align: center;
     padding-top: 30px;   
 }
-.left-side_account_input{
+.account__input{
     width: -webkit-fill-available;
     height: 34px;
     border-radius: 8px;
     border: 0.7px solid $color_border-input;
+    padding-left: 8px;
+    // background: url("/src/static/icons/eye.svg") right no-repeat;
 }
-.left-side_text-agree{
+.account__text-agree{
     text-align: center;
 }
 
-.left-side_button{
+.account__button{
     background-color: $color_black-btn;
     width: -webkit-fill-available;
     height: 34px;
     border-radius: 8px;
     color: $color_white;
+    border: none;
 }
+.account__contacts{
+    display: flex;
+}
+.account__contacts__email, .account__contacts__phone {
+    justify-content: center;
+    align-items: center;
+    width: 144px;
+    display: flex;
+    padding-bottom: 10px;
+}
+.account__contacts__phone{
+    border-bottom: 1px solid #515961;
+}
+.account__contacts__email{
+    border-bottom: 2px solid #141415;
+}
+
+
