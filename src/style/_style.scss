@@ -3,10 +3,10 @@
     background-size: cover;
     float:right;
     // width: 50vw;
-    width: 701.663px;
-    height: 779.625px;
-    // border: 1px solid #877544;
+    width: 700px;
+    height: 780px;
 }
+
 .left-side{
     float: left;
     width: 49vw;
@@ -16,12 +16,14 @@ header{
     text-align: center;
     padding-top: 46px;
 }
+
 h1{
     color: $color_black-text-title;
     font-family: "Open Sans";
     font-weight: 600;
     font-size: 23px;
 }
+
 .account{
     width: 288px;
     display: flex;
@@ -35,10 +37,12 @@ h1{
     margin-right: auto;
     font-size: 12px;
 }
+
 .blue-link{
     color: $color_blue-link;
     font-weight: 600;
 }
+
 .header-logo{
     padding-bottom: 116px;
     font-family: "Nunito";
@@ -46,12 +50,11 @@ h1{
 }
 
 .account__input{
-    width: -webkit-fill-available;
+    width: 96%;
     height: 34px;
     border-radius: 8px;
     border: 0.7px solid $color_border-input;
     padding-left: 8px;
-    // background: url("/src/static/icons/eye.svg") right no-repeat;
 }
 .account__text-agree{
     text-align: center;
@@ -60,9 +63,40 @@ h1{
     line-height: 17px;
 }
 
+.account__email{
+    width: 100%;
+}
+.account__pass{
+    width: 100%;
+    position: relative;
+}
+.account__pass_confirm{
+    width: 100%;
+    position: relative;
+    margin-top: 37px;
+}
+
+.account__pass .account__input{
+    position: absolute;
+}
+.account__pass .account__pass__icon-eye{
+    position: absolute;
+    top: 11px;
+    right: 8px;
+    width: 14px;
+    height: 14px;
+}
+.account__pass__icon-eye-conf{
+    position: absolute;
+    top: 11px;
+    right: 8px;
+    width: 14px;
+    height: 14px;
+}
+
 .account__button{
     background-color: $color_black-btn;
-    width: -webkit-fill-available;
+    width: inherit;
     height: 34px;
     border-radius: 8px;
     color: $color_white;
