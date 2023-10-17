@@ -16,7 +16,12 @@ header{
     text-align: center;
     padding-top: 46px;
 }
-
+h1{
+    color: $color_black-text-title;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 23px;
+}
 .account{
     width: 288px;
     display: flex;
@@ -25,21 +30,21 @@ header{
     align-items: center;
     gap: 17.325px;
     align-self: stretch;
-    border: 1px solid #877980;
+    // border: 1px solid #877980;
     margin-left: auto;
     margin-right: auto;
+    font-size: 12px;
 }
 .blue-link{
     color: $color_blue-link;
+    font-weight: 600;
 }
-
 .header-logo{
     padding-bottom: 116px;
+    font-family: "Nunito";
+    font-size: 11px;
 }
-footer{
-    text-align: center;
-    padding-top: 30px;   
-}
+
 .account__input{
     width: -webkit-fill-available;
     height: 34px;
@@ -50,6 +55,9 @@ footer{
 }
 .account__text-agree{
     text-align: center;
+    color: $color_gray-text;
+    font-size: 12px;
+    line-height: 17px;
 }
 
 .account__button{
@@ -69,12 +77,26 @@ footer{
     width: 144px;
     display: flex;
     padding-bottom: 10px;
+    font-family: "Open Sans";
 }
-.account__contacts__phone{
-    border-bottom: 1px solid #515961;
-}
+
 .account__contacts__email{
     border-bottom: 2px solid #141415;
 }
 
+.account__contacts__phone{
+    border-bottom: 2px solid $color_border-input;
+    color: $color_gray-text;
+}
 
+.account__text-agree, .account__input, .account__button{
+    font-family: "Open Sans";
+}
+
+footer{
+    font-family: "Open Sans";
+    color: $color_gray-text;
+    text-align: center;
+    padding-top: 85px;  
+    font-size: 12px; 
+}

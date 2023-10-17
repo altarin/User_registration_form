@@ -4,12 +4,17 @@
 //     url('../fonts/Nunito.ttf');
 // }
 
-// @font-logo {
-//     font-family: Nunito;
-//     src: url(/src/static/fonts/Nunito/Nunito-ExtraBold.ttf);
-// }
 
 // @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 // https://fonts-online.ru/fonts/nunito
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800;900&display=swap');
+
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Nunito";
+    // адрес шрифта и тип 
+    src: url('/src/static/fonts/Nunito/Nunito-Bold.ttf') format("truetype"); 
+    // font-style: normal; 
+    font-weight: 800; 
+  } 
