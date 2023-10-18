@@ -43,7 +43,7 @@ h1{
 }
 
 .header-logo{
-    padding-bottom: 116px;
+    padding-bottom: 200px;
     font-family: "Nunito";
     font-size: 11px;
 }
@@ -133,4 +133,9 @@ footer{
     text-align: center;
     margin-bottom: 42px;
     font-size: 12px; 
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    // height: 80px;
 }
