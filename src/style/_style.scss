@@ -1,15 +1,14 @@
 .right-side{
-    background: url("/src/static/images/rightImage.jpg") center no-repeat;
-    background-size: cover;
+    background: url("/src/static/images/rightImage.jpg") no-repeat;
     float:right;
-    // width: 50vw;
-    width: 700px;
-    height: 780px;
+    width: 50vw;
+    height: 100vh;
+    background-size: contain;
 }
 
 .left-side{
     float: left;
-    width: 49vw;
+    width: 50vw;
 }
 
 header{
@@ -56,6 +55,7 @@ h1{
     border: 0.7px solid $color_border-input;
     padding-left: 8px;
 }
+
 .account__text-agree{
     text-align: center;
     color: $color_gray-text;
@@ -131,6 +131,6 @@ footer{
     font-family: "Open Sans";
     color: $color_gray-text;
     text-align: center;
-    padding-top: 85px;  
+    margin-bottom: 42px;
     font-size: 12px; 
 }
