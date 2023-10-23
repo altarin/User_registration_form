@@ -7,24 +7,21 @@ const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@((
 const inputEmail = document.querySelector('input');
 let errorMessageEmail = document.getElementById('errorMessageEmail');
 
-    // errorMessageEmail.textContent = '* Поле E-mail заполнено не верно';
-
-
 function isEmailValid(value) {
     return EMAIL_REGEXP.test(value);
-
 }
 
-function onInput() {
+function validateEmail() {
 
 	if (isEmailValid(inputEmail.value)) {
 		inputEmail.style.borderColor = 'green';
+		errorMessageEmail.textContent = '';
 	} else {
 		inputEmail.style.borderColor = 'red';
+		errorMessageEmail.textContent = '* Поле E-mail заполнено не верно';
     }
 }
-inputEmail.addEventListener('input', onInput);
-
+document.querySelector('.account__button').onclick = validateEmail;
 
 
 // валидация пароля
