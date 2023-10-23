@@ -1,9 +1,15 @@
 import './index.scss';
 
 
-// // //валидация email
-
+//валидация email
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+let lowerCaseLetters = /[a-z]/g;
+let upperCaseLetters = /[A-Z]/g;
+let numbers = /[0-9]/g;
+let specialSym = /[!@#$%\^&*\+]/g;
+
+
+
 const inputEmail = document.getElementById('input-email');
 let errorMessageEmail = document.getElementById('errorMessageEmail');
 
@@ -21,11 +27,11 @@ function validateEmail() {
 		errorMessageEmail.textContent = '* Поле E-mail заполнено не верно';
     }
 }
-document.querySelector('.account__button').onclick = validateEmail;
+
 
 // валидация пароля
 
-const inputPass = document.getElementById("input-pass");
+let inputPass = document.getElementById("input-pass");
 
 let letter = document.getElementById("letter");
 let capital = document.getElementById("capital");
@@ -47,7 +53,7 @@ inputPass.onblur = function() {
 inputPass.onkeyup = function() {
 
   // Проверка строчных букв
-let lowerCaseLetters = /[a-z]/g;
+
 if(inputPass.value.match(lowerCaseLetters)) {
     letter.classList.remove("invalid");
     letter.classList.add("valid");
@@ -57,7 +63,7 @@ if(inputPass.value.match(lowerCaseLetters)) {
 }
 
   // Проверка заглавных букв
-let upperCaseLetters = /[A-Z]/g;
+
 if(inputPass.value.match(upperCaseLetters)) {
 	capital.classList.remove("invalid");
     capital.classList.add("valid");
@@ -67,7 +73,7 @@ if(inputPass.value.match(upperCaseLetters)) {
 }
 
   // Проверка чисел
-let numbers = /[0-9]/g;
+
 if(inputPass.value.match(numbers)) {
     number.classList.remove("invalid");
     number.classList.add("valid");
@@ -77,13 +83,13 @@ if(inputPass.value.match(numbers)) {
 }
 
 // Проверить спец символы
-let special = /[!@#$%\^&*\+]/g;
-if(inputPass.value.match(special)) {
-	length.classList.remove("invalid");
-	length.classList.add("valid");
+
+if(inputPass.value.match(specialSym)) {
+	special.classList.remove("invalid");
+	special.classList.add("valid");
 } else {
-	length.classList.remove("valid");
-	length.classList.add("invalid");
+	special.classList.remove("valid");
+	special.classList.add("invalid");
 }
 	
 
@@ -98,29 +104,32 @@ if(inputPass.value.length >= 8) {
 }
 
 function validatePass(){
-	  if( (inputPass.value.match(lowerCaseLetters)) && (inputPass.value.match(upperCaseLetters)) ){
+	if( (inputPass.value.match(lowerCaseLetters)) && (inputPass.value.match(upperCaseLetters)) ){
 		errorMessagePass.textContent = '';
         inputPass.style.borderColor = 'green';
-	  } else {
+	} else {
 		errorMessagePass.textContent = '* Поле "Пароль" заполнено не верно';
         inputPass.style.borderColor = 'red';
-	  }
 	}
-document.querySelector('.account__button').onclick = validatePass;
-
-
+}
 
 // валидация повтора пароля
 
 function validateEmailConfirm() {
-let inputPassConfirm = document.getElementById('input-pass-confirm');
+let inputPassConfirm = document.getElementById('input-pass-conf');
 let errorMessagePassConfirm = document.getElementById('errorMessagePassConfirm');
-		if (inputPass.textContent === inputPassConfirm.textContent) {
+		if (inputPass.value === inputPassConfirm.value) {
 			inputPassConfirm.style.borderColor = 'green';
 			errorMessagePassConfirm.textContent = '';
 		} else {
 			inputPassConfirm.style.borderColor = 'red';
 			errorMessagePassConfirm.textContent = '* Поле "Повторный пароль" заполнено не верно';
+	    }
 	}
-	}
-	document.querySelector('.account__button').onclick = validateEmailConfirm;
+
+
+    document.querySelector('.account__button').addEventListener('click', () => {
+        validateEmail();
+        validatePass();
+        validateEmailConfirm();
+    });
