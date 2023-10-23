@@ -25,7 +25,7 @@ document.querySelector('.account__button').onclick = validateEmail;
 
 // валидация пароля
 
-let inputPass = document.getElementById("input-pass");
+const inputPass = document.getElementById("input-pass");
 
 let letter = document.getElementById("letter");
 let capital = document.getElementById("capital");
@@ -77,14 +77,14 @@ if(inputPass.value.match(numbers)) {
 }
 
 // Проверить спец символы
-// let special = /[!@#$%\^&*\+]/g;
-// if(inputPass.value.match(special)) {
-// 	length.classList.remove("invalid");
-// 	length.classList.add("valid");
-// } else {
-// 	length.classList.remove("valid");
-// 	length.classList.add("invalid");
-// }
+let special = /[!@#$%\^&*\+]/g;
+if(inputPass.value.match(special)) {
+	length.classList.remove("invalid");
+	length.classList.add("valid");
+} else {
+	length.classList.remove("valid");
+	length.classList.add("invalid");
+}
 	
 
   // Проверить длину
@@ -97,13 +97,15 @@ if(inputPass.value.length >= 8) {
 }
 }
 
-// function validatePass(){
-// 	  if( все условия выполнены) {
-// 		errorMessagePass.textContent = '* Поле "Пароль" заполнено верно';
-// 	  } else {
-// 		errorMessagePass.textContent = '* Поле "Пароль" заполнено не верно';
-// 	  }
-// 	}
+function validatePass(){
+	  if( (inputPass.value.match(lowerCaseLetters)) && (inputPass.value.match(upperCaseLetters)) ){
+		errorMessagePass.textContent = '';
+        inputPass.style.borderColor = 'green';
+	  } else {
+		errorMessagePass.textContent = '* Поле "Пароль" заполнено не верно';
+        inputPass.style.borderColor = 'red';
+	  }
+	}
 document.querySelector('.account__button').onclick = validatePass;
 
 
