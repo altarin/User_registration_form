@@ -73,11 +73,12 @@ h1{
 .account__pass_confirm{
     width: 100%;
     position: relative;
-    // margin-top: 37px;
+    margin-top: 37px;
 }
 
 .account__pass .account__input{
     position: absolute;
+    margin-bottom: 37px;
 }
 .account__pass .account__pass__icon-eye{
     position: absolute;
@@ -141,8 +142,8 @@ footer{
 }
 
 
-
 #pswd_info {
+    display:none;
 // border: 1px solid #141415;
 margin: auto;
 border-radius: 8px;
@@ -154,15 +155,20 @@ padding-top: 35px;
     text-align: center;
 }
 
-// position:absolute;
-// bottom:-80px;
-// bottom: -115px9; /* IE Specific */
-// right:55px;
-// width:250px;
-// padding:15px;
-// background:#fefefe;
-// font-size:.875em;
-// border-radius:5px;
-// box-shadow:0 1px 3px #ccc;
-// border:1px solid #ddd;
-// }
+/* Добавить зеленый цвет текста, когда требования верны */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+}
+
+/* Добавить красный цвет текста, когда требования не правы */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+}
